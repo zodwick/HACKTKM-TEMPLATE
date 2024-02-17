@@ -6,6 +6,7 @@ import os
 
 
 ACCESS_TOKEN = "test"
+#replace with actual acces token from env file using dotenv()
 
 
 def download_whatsapp_media(media_url, wa_id, type):
