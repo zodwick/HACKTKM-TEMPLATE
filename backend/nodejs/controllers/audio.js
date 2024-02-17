@@ -11,14 +11,6 @@ const manage_audio = async (incomingMessage) => {
 
   console.log("msgid", messageid);
 
-  let config = {
-    method: "get",
-    maxBodyLength: Infinity,
-    url: `https://graph.facebook.com/v17.0/${messageid}`,
-    headers: {
-      Authorization: `Bearer ${process.env.CLOUD_API_ACCESS_TOKEN}`,
-    },
-  };
 
   const response = await axios.request(config);
 
@@ -34,14 +26,12 @@ const manage_audio = async (incomingMessage) => {
 await  wa.messages.text(message, incomingMessage.from.phone);
 
   const resp = await axios.get(meta_media_url, {
-    responseType: "arraybuffer",
     headers: {
       Authorization: `Bearer ${accessToken}`,
     },
   });
 
   const media = resp.data;
-  const bytes = new Uint8Array(media);
 
  
   let transcript;
