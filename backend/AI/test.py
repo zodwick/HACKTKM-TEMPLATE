@@ -5,7 +5,7 @@ import mimetypes
 import os
 
 
-ACCESS_TOKEN = "EAAI1xZAbkxrABOZBjwTfurgYpzqQafuYZBwdBQn9DHbWzsZCNFNQsWOZAGD4HOCEAIn7MWzkbhqZCZBdBPAJrIN4g3CPpCUwOYwKtZBcoLVI2rsE8KUkTdJq6P7kN7ke7CiZCk1p9H9AdSUCAOaOW5PHmYJCmRacJtuZBxN76w2juH3Xny1SsTWlNNCgUCedLID5VNRMJxlJkF6eJGXFmwDdXhE1Kx5n8ZD"
+ACCESS_TOKEN = "test"
 
 
 def download_whatsapp_media(media_url, wa_id, type):
