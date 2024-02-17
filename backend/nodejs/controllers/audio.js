@@ -5,6 +5,7 @@ import fs from "fs";
 import OpenAI from "openai";
 
 const manage_audio = async (incomingMessage) => {
+ 
   const messageid = incomingMessage.audio.id;
   const accessToken = process.env.CLOUD_API_ACCESS_TOKEN;
 
@@ -26,7 +27,7 @@ const manage_audio = async (incomingMessage) => {
   console.log("meta_media_url", meta_media_url);
 
   const message = {
-    body: "Umm, Zyadha is thinking....🤔💭",
+    body: "Please wait ...⏳",
     preview_url: false,
   };
 
@@ -46,14 +47,6 @@ await  wa.messages.text(message, incomingMessage.from.phone);
   let transcript;
 
 
-
-
-  // await uploadBytes(storageRef, bytes, metadata).then(async (snapshot) => {
-  //   console.log("Uploaded an array!");
-  //   const firebase_url = await getDownloadURL(storageRef);
-  //   //console.log(firebase_url);
-  //   const fileSizeBytes = snapshot.metadata.size;
-
     const openai = new OpenAI({
       apiKey: process.env.OPENAI_API_KEY,
   });
@@ -67,7 +60,7 @@ await  wa.messages.text(message, incomingMessage.from.phone);
 
     // Transcribe the audio using OpenAI API
     const transcription = await openai.audio.transcriptions.create({
-      file: fs.createReadStream(audioPath),
+      file: await fs.createReadStream(audioPath),
       model: "whisper-1",
       response_format: "verbose_json",
       timestamp_granularities: ["word"],
@@ -77,17 +70,28 @@ await  wa.messages.text(message, incomingMessage.from.phone);
       },
     });
 
+
+    const transcription_english = await openai.audio.translations.create({
+      file: await fs.createReadStream(audioPath),
+      model: "whisper-1",
+      response_format: "verbose_json",
+      timestamp_granularities: ["word"],
+      // Make sure to pass your OpenAI API key in the headers
+      headers: {
+        Authorization: `Bearer ${OPENAI_API_KEY}`,
+      },
+    });
+
     transcript = transcription;
-    console.log("Transcription:", transcript);
     
     const voice_res={
       language: transcript.language,
-      text: transcript.text,
+      text: transcription_english.text,
     };
 
 
     // Remove the temporary audio file
-    fs.unlinkSync(audioPath);
+   await fs.unlinkSync(audioPath);
   
 
   console.log("uuufff");
