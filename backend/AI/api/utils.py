@@ -103,7 +103,6 @@ def vision_process(image_path, language):
                 ]
             }
         ],
-        "max_tokens": 300
     }
 
     response = requests.post(
