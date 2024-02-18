@@ -20,17 +20,6 @@ const webhook_get = async (req, res) => {
         return res.status(403).send({ error: "Missing mode or token" });
     }
 
-    // Check the mode and token sent are correct
-    if (mode === "subscribe" && token === VERIFY_TOKEN) {
-        // Respond with 200 OK and challenge token from the request
-        console.log("WEBHOOK_VERIFIED");
-        res.setHeader('Content-Type', 'text/plain');
-        res.send(challenge);
-    }
-    else {
-        // Responds with '403 Forbidden' if verify tokens do not match
-        return res.sendStatus(403);
-    }
 
 };
 
