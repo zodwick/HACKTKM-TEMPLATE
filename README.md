@@ -17,12 +17,12 @@ Many farmers face barriers in accessing information, listing their products, and
 
 
 ## Technologies used
-Next.Js
-Nodejs
-Supabase
-Whisper
-DallE
-Vercel
+Next.Js,
+Nodejs,
+Supabase,
+Whisper,
+DallE,
+Vercel,
 FastApi
 ## How to configure
 Instructions for setting up project
