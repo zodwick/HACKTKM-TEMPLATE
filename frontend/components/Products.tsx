@@ -70,8 +70,7 @@ I see that you are selling them for ${prodcuts.price}.
 Could you please confirm if the product is still available? 
 I am located near ${prodcuts.location}. 
 Looking forward to hearing from you. 
-Thank you.
-contact: +91 9526106287`;
+Thank you.`;
 
     console.log(message);
 
