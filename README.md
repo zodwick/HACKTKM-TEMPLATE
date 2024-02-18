@@ -1,25 +1,29 @@
 ![image](HACK4TKM.jpeg)
 
 
-# {Project Name} - HACK4TKM
-Tell us about your project here
+# Kisaan-Mitr - HACK4TKM
+Many farmers face barriers in accessing information, listing their products, and understanding government schemes due to language and technological constraints. The lack of a user-friendly platform in their native language hinders effective communication and resource utilization. This project aims to address these challenges by developing an AI-powered agricultural assistant accessible through WhatsApp, allowing farmers to interact seamlessly in their native language. The system will facilitate product listing, provide information on government schemes, and offer assistance in diagnosing plant diseases through image uploads, creating an inclusive and efficient solution for farmers.
 
 ## Team Members
-[1.Team Member 1](enter_github_id_here)   
-[2.Team Member 2](enter_github_id_here)   
-[3.Team Member 3](enter_github_id_here)   
-[4.Team Member 4](enter_github_id_here)   
+[1.Jeff Prakash](https://github.com/jeffprakash)   
+[2. Jamal P](https://github.com/zodwick)   
+[3. A Anand](https://github.com/jamaljm)   
 
 ## Link to Project
-[Embed the live link of project](live_link)
+
 
 ## How it Works ?
-Explaining the working of project  
-Embed video of project demo
+
+
 
 ## Technologies used
-List out tech stacks you have used
-
+Next.Js
+Nodejs
+Supabase
+Whisper
+DallE
+Vercel
+FastApi
 ## How to configure
 Instructions for setting up project
 
