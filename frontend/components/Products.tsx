@@ -64,13 +64,14 @@ export default function Products() {
     if (!prodcuts) {
       return;
     }
-    const message = `Hello ${name}, 
+      const message = `Hello ${name},
 I am interested in purchasing ${prodcuts.quantity} of ${prodcuts.product_name} from you. 
 I see that you are selling them for ${prodcuts.price}. 
 Could you please confirm if the product is still available? 
 I am located near ${prodcuts.location}. 
 Looking forward to hearing from you. 
-Thank you.`;
+Thank you.
+contact: +91 9526106287`;
 
     console.log(message);
 
