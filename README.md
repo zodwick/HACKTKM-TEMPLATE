@@ -10,11 +10,11 @@ Many farmers face barriers in accessing information, listing their products, and
 [3. A Anand](https://github.com/jamaljm)   
 
 ## Link to Project
-
+[https://kissan-m-itru-lqf85k7zu-zodwick.vercel.app/](https://kissan-m-itru-lqf85k7zu-zodwick.vercel.app/)
 
 ## How it Works ?
 
-
+[https://drive.google.com/file/d/1xrqv_QbkKoMF4iuqUXKnB2bO7j7MSxxy/view?usp=sharing](https://drive.google.com/file/d/1xrqv_QbkKoMF4iuqUXKnB2bO7j7MSxxy/view?usp=sharing)
 
 ## Technologies used
 Next.Js,
